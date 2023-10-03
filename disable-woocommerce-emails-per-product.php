@@ -25,6 +25,7 @@ require_once 'vendor/autoload.php';
 
 new \DisableWoocommerceEmailsPerProduct\Admin();
 new \DisableWoocommerceEmailsPerProduct\Core();
+new \DisableWoocommerceEmailsPerProduct\GlobalView();
 
 /**
  * Declare compatibility with WooCommerce Custom Order Tables.
