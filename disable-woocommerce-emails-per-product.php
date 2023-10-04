@@ -12,6 +12,10 @@
  *
  */
 
+use DisableWoocommerceEmailsPerProduct\Admin;
+use DisableWoocommerceEmailsPerProduct\Core;
+use DisableWoocommerceEmailsPerProduct\GlobalView;
+
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -23,9 +27,11 @@ define( 'DWEPP_PREFIX', 'dwepp' );
 
 require_once 'vendor/autoload.php';
 
-new \DisableWoocommerceEmailsPerProduct\Admin();
-new \DisableWoocommerceEmailsPerProduct\Core();
-new \DisableWoocommerceEmailsPerProduct\GlobalView();
+new Admin();
+new Core();
+if (!apply_filters('dwepp_disable_global_view', false)) {
+    new GlobalView();
+}
 
 /**
  * Declare compatibility with WooCommerce Custom Order Tables.

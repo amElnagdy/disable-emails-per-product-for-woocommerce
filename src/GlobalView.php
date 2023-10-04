@@ -9,7 +9,6 @@ class GlobalView
     {
         add_action('woocommerce_settings_tabs_array', [$this, 'add_settings_tab'], 50);
         add_action('woocommerce_settings_tabs_disable_woocommerce_emails_per_product', [$this, 'settings_tab']);
-        // add_action('woocommerce_update_options_disable_woocommerce_emails_per_product', [$this, 'update_settings']);
         add_action('woocommerce_admin_field_custom_html', [$this, 'custom_html_field']);
     }
 
@@ -19,20 +18,12 @@ class GlobalView
         return $settings_tab;
     }
 
-    public function settings_tab()
-    {
+    public function settings_tab(): void {
 
         woocommerce_admin_fields($this->get_settings());
     }
 
-    public function update_settings()
-    {
-
-        woocommerce_update_options($this->get_settings());
-    }
-
-    public function get_settings()
-    {
+    public function get_settings(): array {
         $products_with_disabled_emails = $this->get_products_with_disabled_emails();
         return [
             'section_title' => [
@@ -58,21 +49,41 @@ class GlobalView
     {
         echo $value['desc'];
     }
-
+    
     public function get_products_with_disabled_emails()
     {
         global $wpdb;
         $table_name = $wpdb->prefix . 'postmeta';
         $query = $wpdb->prepare("SELECT post_id FROM $table_name WHERE meta_key = %s AND meta_value != %s", '_disabled_emails', '');
-        $product_ids = $wpdb->get_col($query); // Don't forget to actually run the query.
-
-        $product_list = '';
+        $product_ids = $wpdb->get_col($query);
+        
+        if (empty($product_ids)) {
+            return __('No products found with disabled emails.', 'dwepp');
+        }
+        
+        $table = '<table class="widefat">';
+        $table .= '<thead><tr><th class="name">' . __('Product Name', 'dwepp') . '</th><th class="name">' . __('Disabled Emails', 'dwepp') . '</th><th class="name">' . __('Edit Product', 'dwepp') . '</th></tr></thead>';
+        $table .= '<tbody>';
+        
         foreach ($product_ids as $product_id) {
             $product = wc_get_product($product_id);
             if ($product) {
-                $product_list .= sprintf('<li><a href="%s">%s</a></li>', get_edit_post_link($product_id), $product->get_name());
+                $disabled_emails = get_post_meta($product_id, '_disabled_emails', true);
+                $disabled_email_keys = is_array($disabled_emails) ? array_keys($disabled_emails, 'yes', true) : [];
+                $disabled_email_list = implode(', ', $disabled_email_keys);
+                $edit_link = get_edit_post_link($product_id);
+                $table .= "<tr>";
+                $table .= "<td>{$product->get_name()}</td>";
+                $table .=  "<td>{$disabled_email_list}</td>";
+                $table .= "<td><a href=\"{$edit_link}\">" . __('Edit', 'dwepp') . "</a></td>";
+                $table .= "</tr>";
             }
         }
-        return !empty($product_list) ? "<ul>$product_list</ul>" : 'No products found with disabled emails.';
+        
+        $table .= '</tbody></table>';
+        
+        return $table;
     }
+    
+    
 }

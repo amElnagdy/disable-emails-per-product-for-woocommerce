@@ -10,8 +10,18 @@ class Admin
         add_filter('woocommerce_product_data_tabs', [$this, 'add_product_tabs']);
         add_action('woocommerce_product_data_panels', [$this, 'add_product_tab_content']);
         add_action('woocommerce_process_product_meta', [$this, 'save_disabled_emails']);
+        add_action('admin_head', [$this, 'enqueue_custom_css_js']);
+        
     }
-
+    
+    public function enqueue_custom_css_js(): void {
+        if (isset($_GET['page']) && $_GET['page'] == 'wc-settings' && isset($_GET['tab']) && $_GET['tab'] == 'disable_woocommerce_emails_per_product') {
+            echo '<style>.woocommerce-save-button { display: none !important; }
+.name {font-weight: bold !important;}</style>';
+        }
+    }
+    
+    
     public function add_product_tabs($tabs)
     {
         $tabs[DWEPP_PREFIX . '_disable_emails'] = [
