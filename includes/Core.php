@@ -9,7 +9,7 @@ class Core
         add_action('woocommerce_init', [$this, 'init']);
     }
 
-    public function init()
+    public function init(): void
     {
         $mailer = WC()->mailer()->get_emails();
         foreach ($mailer as $email) {
@@ -25,9 +25,11 @@ class Core
 
         // Loop through order items
         foreach ($order->get_items() as $key => $item) {
-            $product_id = $item->get_variation_id() > 0 ? $item->get_variation_id() : $item->get_product_id();
+            $product = $item->get_product();
 
-            // Get the disabled emails for this product
+            // If it is a variation, get the parent product ID
+            $product_id = $product->is_type('variation') ? $product->get_parent_id() : $product->get_id();
+
             $disabled_emails = get_post_meta($product_id, '_disabled_emails', true);
 
             if (is_array($disabled_emails) && isset($disabled_emails[$email_instance->id])) {
@@ -35,7 +37,7 @@ class Core
                 break;
             }
         }
-        
+
         return $recipient;
     }
 }

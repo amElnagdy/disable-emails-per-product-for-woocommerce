@@ -16,22 +16,24 @@ use DisableWoocommerceEmailsPerProduct\Admin;
 use DisableWoocommerceEmailsPerProduct\Core;
 use DisableWoocommerceEmailsPerProduct\GlobalView;
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
-define( 'DWEPP_VERSION', '1.0.0' );
-define( 'DWEPP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'DWEPP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'DWEPP_PREFIX', 'dwepp' );
+define('DWEPP_VERSION', '1.0.0');
+define('DWEPP_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('DWEPP_PLUGIN_URL', plugin_dir_url(__FILE__));
+define('DWEPP_PREFIX', 'dwepp');
 
 require_once 'vendor/autoload.php';
 
 new Admin();
 new Core();
-if (!apply_filters('dwepp_disable_global_view', false)) {
-    new GlobalView();
-}
+add_action('after_setup_theme', function () {
+    if (!apply_filters('dwepp_disable_global_view', false)) {
+        new GlobalView();
+    }
+});
 
 /**
  * Declare compatibility with WooCommerce Custom Order Tables.
@@ -39,8 +41,8 @@ if (!apply_filters('dwepp_disable_global_view', false)) {
 add_action(
     'before_woocommerce_init',
     function () {
-        if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
-            \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+        if (class_exists('\Automattic\WooCommerce\Utilities\FeaturesUtil')) {
+            \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
         }
     }
 );

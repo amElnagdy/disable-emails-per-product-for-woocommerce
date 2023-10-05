@@ -29,7 +29,7 @@ class GlobalView
             'section_title' => [
                 'name' => __('Products with Disabled Emails', 'woocommerce'),
                 'type' => 'title',
-                'desc' => '',
+                'desc' => esc_html__('This is a general overview of all product with disabled emails.', 'dwepp'),
                 'id' => 'wc_disabled_emails_section_title',
             ],
             'products_list' => [
