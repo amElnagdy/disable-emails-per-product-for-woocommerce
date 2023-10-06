@@ -1,6 +1,6 @@
 <?php
 
-namespace DisableWoocommerceEmailsPerProduct;
+namespace DisableEmailsPerProductForWooCommerce;
 
 class GlobalView
 {

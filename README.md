@@ -1,4 +1,4 @@
-# Disable WooCommerce Emails Per Product
+# Disable Emails Per Product for WooCommerce
 
 ## Description
 
@@ -12,7 +12,7 @@ This WordPress plugin allows WooCommerce store owners to disable specific transa
 
 ## Installation
 
-1. Upload the plugin files to the `/wp-content/plugins/disable-woocommerce-emails-per-product` directory, or install the plugin through the WordPress plugins screen directly.
+1. Install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 
 ## Usage

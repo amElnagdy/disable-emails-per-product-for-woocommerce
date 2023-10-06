@@ -1,6 +1,6 @@
 <?php
 
-namespace DisableWoocommerceEmailsPerProduct;
+namespace DisableEmailsPerProductForWooCommerce;
 
 class Admin {
     
@@ -31,7 +31,7 @@ class Admin {
         return $tabs;
     }
     
-    public function add_product_tab_content() {
+    public function add_product_tab_content(): void {
         $saved_emails = get_post_meta( get_the_ID(), '_disabled_emails', true ) ?: [];
         
         echo '<div id="dwepp_options" class="panel woocommerce_options_panel">';
@@ -55,7 +55,7 @@ class Admin {
         echo '</div>';
     }
     
-    public function save_disabled_emails( $post_id ) {
+    public function save_disabled_emails( $post_id ): void {
         if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
             return;
         }
