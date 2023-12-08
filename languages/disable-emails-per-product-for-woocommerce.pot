@@ -1,0 +1,80 @@
+# Copyright (C) 2023 Nagdy
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Disable Emails Per Product for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disable-emails-per-product-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-08T20:46:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.0\n"
+"X-Domain: disable-emails-per-product-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "Disable Emails Per Product for WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+msgid "Disable emails per product or Order."
+msgstr ""
+
+#. Author of the plugin
+msgid "Nagdy"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://nagdy.me"
+msgstr ""
+
+#: includes/Admin.php:31
+msgid "Disable Emails"
+msgstr ""
+
+#. translators: %s: email title
+#: includes/Admin.php:56
+msgid "Check to disable %s email for this product."
+msgstr ""
+
+#: includes/Admin.php:90
+msgid "Disable Order Emails"
+msgstr ""
+
+#: includes/GlobalView.php:14
+msgid "Disable Emails Per Product"
+msgstr ""
+
+#: includes/GlobalView.php:29
+msgid "Products with Disabled Emails"
+msgstr ""
+
+#: includes/GlobalView.php:31
+msgid "This is a general overview of all product with disabled emails."
+msgstr ""
+
+#: includes/GlobalView.php:35
+msgid "Products"
+msgstr ""
+
+#: includes/GlobalView.php:58
+msgid "No products found with disabled emails."
+msgstr ""
+
+#: includes/GlobalView.php:62
+msgid "Product Name"
+msgstr ""
+
+#: includes/GlobalView.php:62
+msgid "Disabled Emails"
+msgstr ""
+
+#: includes/GlobalView.php:62
+msgid "Edit Product"
+msgstr ""
+
+#: includes/GlobalView.php:75
+msgid "Edit"
+msgstr ""
