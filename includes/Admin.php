@@ -11,7 +11,6 @@ class Admin {
 		add_action( 'admin_head', [ $this, 'enqueue_custom_css_js' ] );
 		add_action( 'woocommerce_admin_order_data_after_order_details', [ $this, 'disable_order_emails' ], 9999 );
 		add_action( 'save_post_shop_order', [ $this, 'save_disable_order_emails' ] );
-		// Load text domain
 		add_action( 'plugins_loaded', [ $this, 'load_text_domain' ] );
 		
 	}
@@ -114,7 +113,7 @@ class Admin {
 			return;
 		}
 		if ( isset( $_POST['_disable_order_emails'] ) ) {
-			update_post_meta( $order_id, '_disable_order_emails', $_POST['_disable_order_emails'] );
+			update_post_meta( $order_id, '_disable_order_emails', sanitize_text_field($_POST['_disable_order_emails']) );
 		} else {
 			delete_post_meta( $order_id, '_disable_order_emails' );
 		}

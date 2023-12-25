@@ -44,8 +44,8 @@ class GlobalView {
 		];
 	}
 	
-	public function custom_html_field( $value ) {
-		echo $value['desc'];
+	public function custom_html_field( $value ): void {
+		echo wp_kses_post( $value['desc'] );
 	}
 	
 	public function get_products_with_disabled_emails() {
@@ -69,11 +69,16 @@ class GlobalView {
 				$disabled_email_keys = is_array( $disabled_emails ) ? array_keys( $disabled_emails, 'yes', true ) : [];
 				$disabled_email_list = implode( ', ', $disabled_email_keys );
 				$edit_link           = get_edit_post_link( $product_id );
-				$table               .= "<tr>";
-				$table               .= "<td>{$product->get_name()}</td>";
-				$table               .= "<td>{$disabled_email_list}</td>";
-				$table               .= "<td><a href=\"{$edit_link}\">" . __( 'Edit', 'disable-emails-per-product-for-woocommerce' ) . "</a></td>";
-				$table               .= "</tr>";
+				
+				$product_name = sanitize_text_field($product->get_name());
+				$disabled_email_list = sanitize_text_field($disabled_email_list);
+				$edit_link = esc_url($edit_link);
+				
+				$table .= "<tr>";
+				$table .= "<td>" . esc_html($product_name) . "</td>";
+				$table .= "<td>" . esc_html($disabled_email_list) . "</td>";
+				$table .= "<td><a href=\"" . esc_html($edit_link) . "\">" . __( 'Edit', 'disable-emails-per-product-for-woocommerce' ) . "</a></td>";
+				$table .= "</tr>";
 			}
 		}
 		

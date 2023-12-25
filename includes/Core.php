@@ -58,7 +58,7 @@ class Core {
 	 */
 	public function filter_woocommerce_order_email_recipient( $recipient, $order ): mixed {
 		
-		$page = $_GET['page'] ?? '';
+		$page = isset($_GET['page']) ? sanitize_text_field($_GET['page']) : '';
 		if ( 'wc-settings' === $page ) {
 			return $recipient;
 		}

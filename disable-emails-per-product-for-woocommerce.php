@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-const DWEPP_VERSION = '1.0.0';
 define( 'DWEPP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DWEPP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 const DWEPP_PREFIX = 'dwepp';
