@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Disable Emails Per Product for WooCommerce
  * Description: Disable emails per product or Order.
@@ -17,20 +18,20 @@ use DisableEmailsPerProductForWooCommerce\Admin;
 use DisableEmailsPerProductForWooCommerce\Core;
 use DisableEmailsPerProductForWooCommerce\GlobalView;
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
-const DEPPWC_PREFIX = 'deppwc';
 
+const DEPPWC_PREFIX = 'deppwc';
 require_once 'vendor/autoload.php';
 
 new Admin();
 new Core();
-add_action( 'after_setup_theme', function () {
-	if ( ! apply_filters( 'dwepp_disable_global_view', false ) ) {
+add_action('after_setup_theme', function () {
+	if (!apply_filters('dwepp_disable_global_view', false)) {
 		new GlobalView();
 	}
-} );
+});
 
 /**
  * Declare compatibility with WooCommerce Custom Order Tables.
@@ -38,8 +39,8 @@ add_action( 'after_setup_theme', function () {
 add_action(
 	'before_woocommerce_init',
 	function () {
-		if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
-			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+		if (class_exists('\Automattic\WooCommerce\Utilities\FeaturesUtil')) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
 		}
 	}
 );
