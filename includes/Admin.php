@@ -26,7 +26,7 @@ class Admin {
 	}
 	
 	public function add_product_tabs( $tabs ) {
-		$tabs[ DWEPP_PREFIX . '_disable_emails' ] = [
+		$tabs[ DEPPWC_PREFIX . '_disable_emails' ] = [
 			'label'  => __( 'Disable Emails', 'disable-emails-per-product-for-woocommerce' ),
 			'target' => 'dwepp_options',
 		];

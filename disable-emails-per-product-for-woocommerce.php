@@ -20,10 +20,7 @@ use DisableEmailsPerProductForWooCommerce\GlobalView;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-define( 'DWEPP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'DWEPP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-const DWEPP_PREFIX = 'dwepp';
+const DEPPWC_PREFIX = 'deppwc';
 
 require_once 'vendor/autoload.php';
 
