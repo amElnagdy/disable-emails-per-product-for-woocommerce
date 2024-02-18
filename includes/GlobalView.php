@@ -57,8 +57,7 @@ class GlobalView
 	public function get_products_with_disabled_emails()
 	{
 		global $wpdb;
-		$table_name  = $wpdb->prefix . 'postmeta';
-		$query       = $wpdb->prepare("SELECT post_id FROM $table_name WHERE meta_key = %s AND meta_value != %s", '_disabled_emails', '');
+		$query       = $wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_key = %s AND meta_value != %s", '_disabled_emails', '');
 		$product_ids = $wpdb->get_col($query);
 
 		if (empty($product_ids)) {

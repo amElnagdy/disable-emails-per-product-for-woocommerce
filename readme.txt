@@ -1,6 +1,6 @@
 === Disable Emails Per Product for WooCommerce ===
 Contributors: nagdy
-Tags: disable emails, WooCommerce, emails, disable, product, products, disable emails per product
+Tags: disable emails, WooCommerce, products
 Requires PHP: 7.4
 Requires at least: 6.0
 Tested up to: 6.4
@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-This WordPress plugin allows WooCommerce store owners to disable specific transactional emails per product. Additionally, the plugin provides an option to disable emails for specific orders manually.
+Allows WooCommerce users to disable transactional emails per product. Additionally, it provides an option to disable emails for specific orders manually.
 
 == Description ==
 
