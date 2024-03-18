@@ -76,7 +76,7 @@ class Admin
 		if (
 			defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ||
 			!isset($_POST['save_disabled_emails_nonce']) ||
-			!wp_verify_nonce($_POST['save_disabled_emails_nonce'], 'save_disabled_emails_action')
+			!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['save_disabled_emails_nonce'])), 'save_disabled_emails_action')
 		) {
 			return;
 		}
@@ -133,7 +133,7 @@ class Admin
 			'post.php' !== $pagenow || 'shop_order' !== $typenow ||
 			defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ||
 			!isset($_POST['disable_order_emails_nonce']) ||
-			!wp_verify_nonce($_POST['disable_order_emails_nonce'], 'disable_order_emails_action')
+			!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['disable_order_emails_nonce'])), 'disable_order_emails_action')
 		) {
 			return;
 		}
