@@ -3,8 +3,8 @@ Contributors: nagdy
 Tags: disable emails, WooCommerce, products
 Requires PHP: 7.4
 Requires at least: 6.0
-Tested up to: 6.5
-Stable tag: 1.0.0
+Tested up to: 6.7
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,5 +54,9 @@ Post detailed information about the issue in the support forum and we will work 
 3. Global View: See which emails are disabled for each product.
 
 == Changelog ==
+
+= 1.0.1 =
+* WordPress 6.7 compatibility.
+
 = 1.0.0 =
 * Initial Release
