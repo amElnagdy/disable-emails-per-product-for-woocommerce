@@ -6,26 +6,26 @@ class Core
 {
 	public function __construct()
 	{
-		add_action('woocommerce_init', [$this, 'init']);
+        add_filter('woocommerce_email_classes', [$this, 'filter_emails'], 5);
 	}
 
+    public function filter_emails($emails)
+    {
+        foreach ($emails as $email) {
+            if ($email->is_enabled()) {
+                add_filter('woocommerce_email_recipient_'.$email->id, [
+                    $this,
+                    'filter_woocommerce_email_recipient',
+                ], 10, 3);
+                add_filter('woocommerce_email_recipient_'.$email->id, [
+                    $this,
+                    'filter_woocommerce_order_email_recipient',
+                ], 9999, 2);
+            }
+        }
 
-	public function init(): void
-	{
-		$mailer = WC()->mailer()->get_emails();
-		foreach ($mailer as $email) {
-			if ($email->is_enabled()) {
-				add_filter('woocommerce_email_recipient_' . $email->id, [
-					$this,
-					'filter_woocommerce_email_recipient'
-				], 10, 3);
-				add_filter('woocommerce_email_recipient_' . $email->id, [
-					$this,
-					'filter_woocommerce_order_email_recipient'
-				], 9999, 2);
-			}
-		}
-	}
+        return $emails;
+    }
 
 	public function filter_woocommerce_email_recipient($recipient, $order, $email_instance)
 	{
