@@ -59,7 +59,7 @@ class Core
 	 *
 	 * @return mixed|string
 	 */
-	public function filter_woocommerce_order_email_recipient($recipient, $order): mixed
+	public function filter_woocommerce_order_email_recipient($recipient, $order)
 	{
 
 		$page = isset($_GET['page']) ? sanitize_text_field($_GET['page']) : '';
