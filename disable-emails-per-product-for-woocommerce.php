@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 
 const DEPPWC_PREFIX = 'deppwc';
 define('DEPPWC_BASENAME', plugin_basename(__FILE__));
-require_once 'vendor/autoload.php';
+include_once __DIR__.'/vendor/autoload.php';
 
 new Admin();
 new Core();
