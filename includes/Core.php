@@ -6,14 +6,12 @@ class Core
 {
 	public function __construct()
 	{
-		add_action('woocommerce_init', [$this, 'init']);
+		add_filter('woocommerce_email_classes', [$this, 'filter_emails'], PHP_INT_MAX);
 	}
 
-
-	public function init(): void
+	public function filter_emails($emails)
 	{
-		$mailer = WC()->mailer()->get_emails();
-		foreach ($mailer as $email) {
+		foreach ($emails as $email) {
 			if ($email->is_enabled()) {
 				add_filter('woocommerce_email_recipient_' . $email->id, [
 					$this,
@@ -25,6 +23,8 @@ class Core
 				], 9999, 2);
 			}
 		}
+
+		return $emails;
 	}
 
 	public function filter_woocommerce_email_recipient($recipient, $order, $email_instance)
@@ -59,7 +59,7 @@ class Core
 	 *
 	 * @return mixed|string
 	 */
-	public function filter_woocommerce_order_email_recipient($recipient, $order): mixed
+	public function filter_woocommerce_order_email_recipient($recipient, $order)
 	{
 
 		$page = isset($_GET['page']) ? sanitize_text_field($_GET['page']) : '';
