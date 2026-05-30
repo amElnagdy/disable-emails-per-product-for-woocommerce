@@ -10,6 +10,7 @@
  * Text Domain: disable-emails-per-product-for-woocommerce
  * Domain Path: /languages
  * Requires Plugins: woocommerce
+ * Requires PHP: 7.4
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
