@@ -9,6 +9,7 @@
  * Contributors: Nagdy
  * Text Domain: disable-emails-per-product-for-woocommerce
  * Domain Path: /languages
+ * Requires Plugins: woocommerce
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -24,6 +25,7 @@ if (!defined('ABSPATH')) {
 
 const DEPPWC_PREFIX = 'deppwc';
 define('DEPPWC_BASENAME', plugin_basename(__FILE__));
+define('DEPPWC_PLUGIN_FILE', __FILE__);
 require_once 'vendor/autoload.php';
 
 new Admin();

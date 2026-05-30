@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	colors="true"
+	verbose="true"
+	failOnWarning="true"
+	failOnRisky="true"
+	failOnIncomplete="true"
+	failOnSkipped="true"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+>
+	<testsuites>
+		<testsuite name="regression">
+			<directory>tests/regression</directory>
+		</testsuite>
+	</testsuites>
+
+	<coverage>
+		<include>
+			<directory suffix=".php">includes</directory>
+		</include>
+	</coverage>
+
+	<php>
+		<env name="WP_TESTS_DIR" value="/tmp/wordpress-tests-lib"/>
+	</php>
+</phpunit>

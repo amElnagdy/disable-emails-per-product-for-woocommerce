@@ -1,7 +1,35 @@
 {
-  "autoload": {
-    "psr-4": {
-      "DisableEmailsPerProductForWooCommerce\\": "includes/"
-    }
-  }
+	"name": "nagdy/disable-emails-per-product-for-woocommerce",
+	"description": "Disable WooCommerce transactional emails per product or order.",
+	"license": "GPL-3.0-or-later",
+	"autoload": {
+		"psr-4": {
+			"DisableEmailsPerProductForWooCommerce\\": "includes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.6",
+		"squizlabs/php_codesniffer": "^3.7",
+		"wp-coding-standards/wpcs": "^3.0",
+		"woocommerce/woocommerce-sniffs": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"yoast/phpunit-polyfills": "^2.0"
+	},
+	"scripts": {
+		"test": "phpunit -c phpunit.xml.dist",
+		"lint": "php tests/bin/php-lint.php",
+		"sniff": "phpcs --standard=phpcs.xml.dist",
+		"sniff:fix": "phpcbf --standard=phpcs.xml.dist"
+	}
 }

@@ -1,0 +1,259 @@
+﻿# Command: phpstan analyse --level=5 includes/ disable-emails-per-product-for-woocommerce.php
+# PHPStan version: PHPStan - PHP Static Analysis Tool 2.1.55
+ 0/4 [>---------------------------]   0%
+ 4/4 [============================] 100%
+System.Management.Automation.RemoteException
+Instructions for interpreting errors
+---------
+System.Management.Automation.RemoteException
+Each error has an associated identifier, like `argument.type`
+or `return.missing`.
+System.Management.Automation.RemoteException
+Each error identifier has documentation at URL https://phpstan.org/error-identifiers/<identifier>
+This page contains code example, explanation why is this an error
+and instruction how to fix it.
+Before fixing the error, fetch the documentation page for its identifier.
+System.Management.Automation.RemoteException
+The error usually indicates a real bug or incorrect type in the code. Fix the underlying cause, do not just make the error go away.
+Do not add `@phpstan-ignore` comments, `@phpstan-ignore-next-line` comments, or baseline entries to suppress the error.
+Do not use assert() or inline @var PHPDoc tag to override PHPStan's inferred type.
+Do not add type casts just to silence errors.
+Do not widen parameter or return types just to make the error go away.
+ ------ ---------------------------------------------------------------------- 
+  Line   disable-emails-per-product-for-woocommerce.php                        
+ ------ ---------------------------------------------------------------------- 
+  26     Function plugin_basename not found.                                   
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  31     Function add_action not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  32     Function apply_filters not found.                                     
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  40     Function add_action not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------- 
+  Line   includes\Admin.php                                                                                         
+ ------ ----------------------------------------------------------------------------------------------------------- 
+  10     Function add_filter not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  11     Function add_action not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  12     Function add_action not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  13     Function add_action not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  14     Function add_action not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  15     Function add_action not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  16     Function add_action not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  17     Constant DEPPWC_BASENAME not found.                                                                        
+         ≡ƒ¬¬  constant.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  17     Function add_filter not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  36     Function __ not found.                                                                                     
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  45     Function get_post_meta not found.                                                                          
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  45     Function get_the_ID not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  49     Function WC not found.                                                                                     
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  54     Function woocommerce_wp_checkbox not found.                                                                
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  62     Function esc_html__ not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  63     Function esc_html not found.                                                                               
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  69     Function wp_nonce_field not found.                                                                         
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  80     Function sanitize_text_field not found.                                                                    
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  80     Function wp_unslash not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  80     Function wp_verify_nonce not found.                                                                        
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  86     Function current_user_can not found.                                                                       
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  92     Parameter #1 $callback of function array_map expects (callable(mixed): mixed)|null, 'sanitize_text_field'  
+         given.                                                                                                     
+         ≡ƒ¬¬  argument.type                                                                                          
+  93     Function update_post_meta not found.                                                                       
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  95     Function delete_post_meta not found.                                                                       
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  108    Function woocommerce_wp_checkbox not found.                                                                
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  111    Function __ not found.                                                                                     
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  117    Function wp_nonce_field not found.                                                                         
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  137    Function sanitize_text_field not found.                                                                    
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  137    Function wp_unslash not found.                                                                             
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  137    Function wp_verify_nonce not found.                                                                        
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  143    Function current_user_can not found.                                                                       
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  149    Function sanitize_text_field not found.                                                                    
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  149    Function update_post_meta not found.                                                                       
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  151    Function delete_post_meta not found.                                                                       
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  158    Function load_plugin_textdomain not found.                                                                 
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  163    Function __ not found.                                                                                     
+         ≡ƒ¬¬  function.notFound                                                                                      
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+ ------ ----------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   includes\Core.php                                                     
+ ------ ---------------------------------------------------------------------- 
+  9      Function add_action not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  15     Function WC not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  18     Function add_filter not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  22     Function add_filter not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  37     Call to method get_items() on an unknown class WC_Order.              
+         ≡ƒ¬¬  class.notFound                                                    
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  43     Function get_post_meta not found.                                     
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  45     Access to property $id on an unknown class WC_Email.                  
+         ≡ƒ¬¬  class.notFound                                                    
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  65     Function sanitize_text_field not found.                               
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  69     Function get_post_meta not found.                                     
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   includes\GlobalView.php                                               
+ ------ ---------------------------------------------------------------------- 
+  10     Function add_action not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  11     Function add_action not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  12     Function add_action not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  17     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  25     Function woocommerce_admin_fields not found.                          
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  34     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  36     Function esc_html__ not found.                                        
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  40     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  54     Function wp_kses_post not found.                                      
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  64     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  68     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  68     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  68     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  72     Function wc_get_product not found.                                    
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  74     Function get_post_meta not found.                                     
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  77     Function get_edit_post_link not found.                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  79     Function sanitize_text_field not found.                               
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  80     Function sanitize_text_field not found.                               
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  81     Function esc_url not found.                                           
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  84     Function esc_html not found.                                          
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  85     Function esc_html not found.                                          
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  86     Function __ not found.                                                
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  86     Function esc_html not found.                                          
+         ≡ƒ¬¬  function.notFound                                                 
+         ≡ƒÆí  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ ---------------------------------------------------------------------- 
+
+ [ERROR] Found 72 errors                                                                                               
+

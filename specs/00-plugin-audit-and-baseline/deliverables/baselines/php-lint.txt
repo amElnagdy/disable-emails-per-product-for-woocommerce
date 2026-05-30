@@ -1,0 +1,6 @@
+﻿# Command: Get-ChildItem -Recurse -Filter *.php | Where-Object { $_.FullName -notlike '*\vendor\*' } | ForEach-Object { php -l $_.FullName }
+# PHP version: PHP 8.2.12 (cli) (built: Oct 24 2023 21:15:15) (ZTS Visual C++ 2019 x64)
+No syntax errors detected in D:\WordPress\disable-emails-per-product-for-woocommerce\disable-emails-per-product-for-woocommerce.php
+No syntax errors detected in D:\WordPress\disable-emails-per-product-for-woocommerce\includes\Admin.php
+No syntax errors detected in D:\WordPress\disable-emails-per-product-for-woocommerce\includes\Core.php
+No syntax errors detected in D:\WordPress\disable-emails-per-product-for-woocommerce\includes\GlobalView.php

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<ruleset name="DisableEmailsPerProductForWooCommerce">
+	<description>WordPress + WooCommerce coding standards for the Disable Emails Per Product plugin.</description>
+
+	<!-- Files to scan -->
+	<file>disable-emails-per-product-for-woocommerce.php</file>
+	<file>includes/</file>
+
+	<!-- Files / paths to exclude unconditionally -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/specs/*</exclude-pattern>
+	<exclude-pattern>*/.specify/*</exclude-pattern>
+	<exclude-pattern>*/.github/*</exclude-pattern>
+
+	<!-- Rulesets -->
+	<rule ref="WordPress">
+		<!-- Baseline exclusions: pre-existing violations in the post-Phase-4 source state. -->
+		<!-- Established 2026-05-30 against commit 33ff286. -->
+		<!-- Remove only when the underlying violation is fixed in source. -->
+		<exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket"/>
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis"/>
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis"/>
+		<exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceAfter"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
+		<exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceBefore"/>
+		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine"/>
+		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
+		<exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceAfterArrayOpenerSingleLine"/>
+		<exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceBeforeArrayCloserSingleLine"/>
+		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"/>
+		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingBeforeClose"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
+		<exclude name="Generic.WhiteSpace.ArbitraryParenthesesSpacing.SpaceAfterOpen"/>
+		<exclude name="Generic.WhiteSpace.ArbitraryParenthesesSpacing.SpaceBeforeClose"/>
+		<exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine"/>
+		<exclude name="Generic.Files.LineEndings.InvalidEOLChar"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+		<exclude name="Squiz.Commenting.FileComment.Missing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamType"/>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+		<exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
+		<exclude name="Squiz.Commenting.ClassComment.Missing"/>
+		<exclude name="WordPress.Arrays.ArrayKeySpacingRestrictions.NoSpacesAroundArrayKeys"/>
+		<exclude name="WordPress.WP.Capabilities.Unknown"/>
+		<exclude name="WordPress.WhiteSpace.CastStructureSpacing.NoSpaceBeforeOpenParenthesis"/>
+		<exclude name="NormalizedArrays.Arrays.CommaAfterLast.MissingMultiLine"/>
+		<exclude name="WordPress.Security.NonceVerification.Recommended"/>
+		<exclude name="Generic.Commenting.DocComment.SpacingAfter"/>
+		<exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
+		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
+		<exclude name="Squiz.Commenting.FileComment.SpacingAfterOpen"/>
+		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfter"/>
+		<exclude name="WooCommerce.Commenting.CommentHooks.MissingHookComment"/>
+		<exclude name="WordPress.DB.PreparedSQL.NotPrepared"/>
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+	</rule>
+
+	<rule ref="WooCommerce-Core">
+		<!-- Same baseline pattern as WordPress block above. -->
+	</rule>
+
+	<!-- Configure scan behavior -->
+	<arg value="ps"/>            <!-- Show progress (p) and source codes (s) -->
+	<arg name="colors"/>          <!-- Color output -->
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/>
+
+	<!-- Custom plugin properties to pass to WPCS sniffs -->
+	<config name="minimum_supported_wp_version" value="6.0"/>
+	<config name="testVersion" value="8.0-"/>
+
+	<!-- Text domain configuration (WPCS i18n sniffs use this) -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="disable-emails-per-product-for-woocommerce"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

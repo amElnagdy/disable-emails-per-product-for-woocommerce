@@ -1,0 +1,4 @@
+php: PHP 8.2.12 (cli) (built: Oct 24 2023 21:15:15) (ZTS Visual C++ 2019 x64)
+composer: Composer version 2.8.11 2025-08-21 11:29:39
+git: git version 2.54.0.windows.1
+wp: NOT FOUND (optional)

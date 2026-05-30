@@ -1,0 +1,569 @@
+﻿# Command: phpcs --standard=WordPress --extensions=php disable-emails-per-product-for-woocommerce.php includes/
+# PHPCS version: PHP_CodeSniffer version 3.13.5 (stable) by Squiz and PHPCSStandards
+
+FILE: ...per-product-for-woocommerce\disable-emails-per-product-for-woocommerce.php
+--------------------------------------------------------------------------------
+FOUND 29 ERRORS AFFECTING 9 LINES
+--------------------------------------------------------------------------------
+  1 | ERROR | [ ] There must be no blank lines before the file comment
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+    |       |     "\r\n"
+ 15 | ERROR | [ ] Missing @package tag in file comment
+ 15 | ERROR | [x] Additional blank lines found at end of doc comment
+ 21 | ERROR | [x] No space after opening parenthesis is prohibited
+ 21 | ERROR | [x] Expected 1 space before "!"; 0 found
+ 21 | ERROR | [x] Expected 1 space after "!"; 0 found
+ 21 | ERROR | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 21 | ERROR | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 21 | ERROR | [x] No space before closing parenthesis is prohibited
+ 26 | ERROR | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 26 | ERROR | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 26 | ERROR | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 26 | ERROR | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 31 | ERROR | [x] Opening parenthesis of a multi-line function call must be the
+    |       |     last content on the line
+ 31 | ERROR | [x] Only one argument is allowed per line in a multi-line
+    |       |     function call
+ 32 | ERROR | [x] No space after opening parenthesis is prohibited
+ 32 | ERROR | [x] Expected 1 space before "!"; 0 found
+ 32 | ERROR | [x] Expected 1 space after "!"; 0 found
+ 32 | ERROR | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 32 | ERROR | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 32 | ERROR | [x] No space before closing parenthesis is prohibited
+ 35 | ERROR | [x] Closing parenthesis of a multi-line function call must be on
+    |       |     a line by itself
+ 43 | ERROR | [x] No space after opening parenthesis is prohibited
+ 43 | ERROR | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 43 | ERROR | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 43 | ERROR | [x] No space before closing parenthesis is prohibited
+ 44 | ERROR | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 44 | ERROR | [x] Expected 1 spaces before closing parenthesis; 0 found
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 27 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: D:\WordPress\disable-emails-per-product-for-woocommerce\includes\Admin.php
+--------------------------------------------------------------------------------
+FOUND 190 ERRORS AND 6 WARNINGS AFFECTING 75 LINES
+--------------------------------------------------------------------------------
+   1 | ERROR   | [ ] Filenames should be all lowercase with hyphens as word
+     |         |     separators. Expected admin.php, but found Admin.php.
+   1 | ERROR   | [ ] Class file names should be based on the class name with
+     |         |     "class-" prepended. Expected class-admin.php, but found
+     |         |     Admin.php.
+   1 | ERROR   | [ ] Missing file doc comment
+   1 | ERROR   | [x] End of line character is invalid; expected "\n" but found
+     |         |     "\r\n"
+   5 | ERROR   | [ ] Missing doc comment for class Admin
+   6 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration for class Admin
+   8 | ERROR   | [ ] Missing doc comment for function __construct()
+   9 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+  10 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  10 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  10 | ERROR   | [x] Short array syntax is not allowed
+  10 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  10 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  11 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  11 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  11 | ERROR   | [x] Short array syntax is not allowed
+  11 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  11 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  12 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  12 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  12 | ERROR   | [x] Short array syntax is not allowed
+  12 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  12 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  13 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  13 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  13 | ERROR   | [x] Short array syntax is not allowed
+  13 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  13 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  14 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  14 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  14 | ERROR   | [x] Short array syntax is not allowed
+  14 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  14 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  15 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  15 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  15 | ERROR   | [x] Short array syntax is not allowed
+  15 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  15 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  16 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  16 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  16 | ERROR   | [x] Short array syntax is not allowed
+  16 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  16 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  17 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  17 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  17 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  17 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  20 | ERROR   | [ ] Missing doc comment for function enqueue_custom_css_js()
+  21 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+  23 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  23 | WARNING | [ ] Processing form data without nonce verification.
+  23 | WARNING | [ ] Processing form data without nonce verification.
+  23 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  24 | WARNING | [ ] Processing form data without nonce verification.
+  25 | WARNING | [ ] Processing form data without nonce verification.
+  33 | ERROR   | [ ] Missing doc comment for function add_product_tabs()
+  33 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  33 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  34 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+  35 | ERROR   | [x] Array keys must be surrounded by spaces unless they
+     |         |     contain a string or an integer.
+  35 | ERROR   | [x] Short array syntax is not allowed
+  36 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  36 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  43 | ERROR   | [ ] Missing doc comment for function add_product_tab_content()
+  44 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+  45 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  45 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  45 | ERROR   | [ ] Using short ternaries is not allowed as they are rarely
+     |         |     used correctly
+  45 | ERROR   | [x] Short array syntax is not allowed
+  50 | ERROR   | [x] Expected 1 space after the array opener in a single line
+     |         |     array. Found: no spaces
+  50 | ERROR   | [x] Short array syntax is not allowed
+  50 | ERROR   | [x] Expected 1 space before the array closer in a single line
+     |         |     array. Found: no spaces
+  52 | ERROR   | [x] No space after opening parenthesis is prohibited
+  52 | ERROR   | [x] No space before closing parenthesis is prohibited
+  53 | ERROR   | [x] No space after opening parenthesis is prohibited
+  53 | ERROR   | [x] Expected 1 space after "!"; 0 found
+  53 | WARNING | [ ] Not using strict comparison for in_array; supply true for
+     |         |     $strict argument.
+  53 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  53 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  53 | ERROR   | [x] No space before closing parenthesis is prohibited
+  54 | ERROR   | [x] Opening parenthesis of a multi-line function call must be
+     |         |     the last content on the line
+  54 | ERROR   | [x] Short array syntax is not allowed
+  57 | ERROR   | [x] Array keys must be surrounded by spaces unless they
+     |         |     contain a string or an integer.
+  62 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  62 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  63 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  63 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  65 | ERROR   | [x] Closing parenthesis of a multi-line function call must be
+     |         |     on a line by itself
+  69 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  69 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  74 | ERROR   | [ ] Missing doc comment for function save_disabled_emails()
+  74 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  74 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  75 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+  76 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+     |         |     or question marks
+  78 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  78 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  78 | ERROR   | [ ] Mixing different binary boolean operators within an
+     |         |     expression without using parentheses to clarify precedence
+     |         |     is not allowed.
+  79 | ERROR   | [x] Expected 1 space after "!"; 0 found
+  79 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  79 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  80 | ERROR   | [x] Expected 1 space after "!"; 0 found
+  80 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  80 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  80 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  80 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  80 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  80 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  85 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+     |         |     or question marks
+  86 | ERROR   | [x] No space after opening parenthesis is prohibited
+  86 | ERROR   | [x] Expected 1 space before "!"; 0 found
+  86 | ERROR   | [x] Expected 1 space after "!"; 0 found
+  86 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  86 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  86 | ERROR   | [x] No space before closing parenthesis is prohibited
+  90 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+     |         |     or question marks
+  91 | ERROR   | [x] No space after opening parenthesis is prohibited
+  91 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  91 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  91 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  91 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  91 | ERROR   | [x] No space before closing parenthesis is prohibited
+  92 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  92 | ERROR   | [ ] $_POST['dwepp_disabled_emails'] not unslashed before
+     |         |     sanitization. Use wp_unslash() or similar
+  92 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  93 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  93 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  95 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  95 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+  99 | ERROR   | [ ] Doc comment for parameter "$order" missing
+ 102 | ERROR   | [ ] Missing parameter type
+ 106 | WARNING | [ ] The method parameter $order is never used
+ 106 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 106 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 107 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+ 111 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 111 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 117 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 117 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 120 | ERROR   | [ ] Doc comment for parameter "$order_id" missing
+ 123 | ERROR   | [ ] Missing parameter type
+ 127 | ERROR   | [x] There must be no blank lines between the function comment
+     |         |     and the declaration
+ 128 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 128 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 129 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+ 132 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+     |         |     or question marks
+ 135 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 135 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 135 | ERROR   | [ ] Mixing different binary boolean operators within an
+     |         |     expression without using parentheses to clarify precedence
+     |         |     is not allowed.
+ 135 | ERROR   | [ ] Mixing different binary boolean operators within an
+     |         |     expression without using parentheses to clarify precedence
+     |         |     is not allowed.
+ 136 | ERROR   | [x] Expected 1 space after "!"; 0 found
+ 136 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 136 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 137 | ERROR   | [x] Expected 1 space after "!"; 0 found
+ 137 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 137 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 137 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 137 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 137 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 137 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 142 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+     |         |     or question marks
+ 143 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 143 | ERROR   | [x] Expected 1 space before "!"; 0 found
+ 143 | ERROR   | [x] Expected 1 space after "!"; 0 found
+ 143 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 143 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 143 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 147 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+     |         |     or question marks
+ 148 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 148 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 148 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 148 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 149 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 149 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 149 | ERROR   | [ ] $_POST['_disable_order_emails'] not unslashed before
+     |         |     sanitization. Use wp_unslash() or similar
+ 149 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 149 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 151 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 151 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 156 | ERROR   | [ ] Missing doc comment for function load_text_domain()
+ 157 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+ 158 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 158 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 158 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 158 | ERROR   | [x] Use the __DIR__ constant instead of calling
+     |         |     dirname(__FILE__) (PHP >= 5.3)
+ 158 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 158 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 158 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 161 | ERROR   | [ ] Missing doc comment for function donate_link()
+ 161 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 161 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 162 | ERROR   | [x] Opening brace should be on the same line as the
+     |         |     declaration
+ 163 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 163 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 164 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 164 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 163 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: D:\WordPress\disable-emails-per-product-for-woocommerce\includes\Core.php
+--------------------------------------------------------------------------------
+FOUND 79 ERRORS AND 2 WARNINGS AFFECTING 33 LINES
+--------------------------------------------------------------------------------
+  1 | ERROR   | [ ] Filenames should be all lowercase with hyphens as word
+    |         |     separators. Expected core.php, but found Core.php.
+  1 | ERROR   | [ ] Class file names should be based on the class name with
+    |         |     "class-" prepended. Expected class-core.php, but found
+    |         |     Core.php.
+  1 | ERROR   | [ ] Missing file doc comment
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found
+    |         |     "\r\n"
+  5 | ERROR   | [ ] Missing doc comment for class Core
+  6 | ERROR   | [x] Opening brace should be on the same line as the declaration
+    |         |     for class Core
+  7 | ERROR   | [ ] Missing doc comment for function __construct()
+  8 | ERROR   | [x] Opening brace should be on the same line as the declaration
+  9 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+  9 | ERROR   | [x] Expected 1 space after the array opener in a single line
+    |         |     array. Found: no spaces
+  9 | ERROR   | [x] Short array syntax is not allowed
+  9 | ERROR   | [x] Expected 1 space before the array closer in a single line
+    |         |     array. Found: no spaces
+  9 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 13 | ERROR   | [ ] Missing doc comment for function init()
+ 14 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 16 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 16 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 17 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 17 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 18 | ERROR   | [x] Opening parenthesis of a multi-line function call must be
+    |         |     the last content on the line
+ 18 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+    |         |     function call
+ 18 | ERROR   | [x] Short array syntax is not allowed
+ 20 | ERROR   | [x] There should be a comma after the last array item in a
+    |         |     multi-line array.
+ 21 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+    |         |     function call
+ 21 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+    |         |     function call
+ 21 | ERROR   | [x] Closing parenthesis of a multi-line function call must be
+    |         |     on a line by itself
+ 22 | ERROR   | [x] Opening parenthesis of a multi-line function call must be
+    |         |     the last content on the line
+ 22 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+    |         |     function call
+ 22 | ERROR   | [x] Short array syntax is not allowed
+ 24 | ERROR   | [x] There should be a comma after the last array item in a
+    |         |     multi-line array.
+ 25 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+    |         |     function call
+ 25 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+    |         |     function call
+ 25 | ERROR   | [x] Closing parenthesis of a multi-line function call must be
+    |         |     on a line by itself
+ 30 | ERROR   | [ ] Missing doc comment for function
+    |         |     filter_woocommerce_email_recipient()
+ 30 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 30 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 31 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 32 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 32 | ERROR   | [x] Expected 1 space before "!"; 0 found
+ 32 | ERROR   | [x] Expected 1 space after "!"; 0 found
+ 32 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 32 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 32 | ERROR   | [x] Expected 1 space after "!"; 0 found
+ 32 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 32 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 32 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 36 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+    |         |     or question marks
+ 37 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 37 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 40 | ERROR   | [ ] Inline comments must end in full-stops, exclamation marks,
+    |         |     or question marks
+ 41 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 41 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 43 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 43 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 45 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 45 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 45 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 45 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 45 | ERROR   | [x] Array keys must be surrounded by spaces unless they contain
+    |         |     a string or an integer.
+ 45 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 45 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 54 | ERROR   | [ ] Doc comment for parameter "$recipient" missing
+ 54 | ERROR   | [ ] Doc comment for parameter "$order" missing
+ 57 | ERROR   | [ ] Missing parameter type
+ 58 | ERROR   | [ ] Missing parameter type
+ 62 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 62 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 63 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 65 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 65 | WARNING | [ ] Processing form data without nonce verification.
+ 65 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 65 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 65 | WARNING | [ ] Processing form data without nonce verification.
+ 65 | ERROR   | [ ] $_GET['page'] not unslashed before sanitization. Use
+    |         |     wp_unslash() or similar
+ 65 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 66 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 66 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 69 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 69 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 69 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 69 | ERROR   | [x] No space before closing parenthesis is prohibited
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 65 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...rdPress\disable-emails-per-product-for-woocommerce\includes\GlobalView.php
+--------------------------------------------------------------------------------
+FOUND 110 ERRORS AND 5 WARNINGS AFFECTING 49 LINES
+--------------------------------------------------------------------------------
+  1 | ERROR   | [ ] Filenames should be all lowercase with hyphens as word
+    |         |     separators. Expected globalview.php, but found
+    |         |     GlobalView.php.
+  1 | ERROR   | [ ] Class file names should be based on the class name with
+    |         |     "class-" prepended. Expected class-globalview.php, but
+    |         |     found GlobalView.php.
+  1 | ERROR   | [ ] Missing file doc comment
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found
+    |         |     "\r\n"
+  5 | ERROR   | [ ] Missing doc comment for class GlobalView
+  6 | ERROR   | [x] Opening brace should be on the same line as the declaration
+    |         |     for class GlobalView
+  8 | ERROR   | [ ] Missing doc comment for function __construct()
+  9 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 10 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 10 | ERROR   | [x] Expected 1 space after the array opener in a single line
+    |         |     array. Found: no spaces
+ 10 | ERROR   | [x] Short array syntax is not allowed
+ 10 | ERROR   | [x] Expected 1 space before the array closer in a single line
+    |         |     array. Found: no spaces
+ 10 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 11 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 11 | ERROR   | [x] Expected 1 space after the array opener in a single line
+    |         |     array. Found: no spaces
+ 11 | ERROR   | [x] Short array syntax is not allowed
+ 11 | ERROR   | [x] Expected 1 space before the array closer in a single line
+    |         |     array. Found: no spaces
+ 11 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 12 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 12 | ERROR   | [x] Expected 1 space after the array opener in a single line
+    |         |     array. Found: no spaces
+ 12 | ERROR   | [x] Short array syntax is not allowed
+ 12 | ERROR   | [x] Expected 1 space before the array closer in a single line
+    |         |     array. Found: no spaces
+ 12 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 15 | ERROR   | [ ] Missing doc comment for function add_settings_tab()
+ 15 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 15 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 16 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 17 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 17 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 22 | ERROR   | [ ] Missing doc comment for function settings_tab()
+ 23 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 25 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 25 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 28 | ERROR   | [ ] Missing doc comment for function get_settings()
+ 29 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 32 | ERROR   | [x] Short array syntax is not allowed
+ 33 | ERROR   | [x] Short array syntax is not allowed
+ 34 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 34 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 36 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 36 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 39 | ERROR   | [x] Short array syntax is not allowed
+ 40 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 40 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 45 | ERROR   | [x] Short array syntax is not allowed
+ 52 | ERROR   | [ ] Missing doc comment for function custom_html_field()
+ 52 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 52 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 53 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 54 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 54 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 57 | ERROR   | [ ] Missing doc comment for function
+    |         |     get_products_with_disabled_emails()
+ 58 | ERROR   | [x] Opening brace should be on the same line as the declaration
+ 60 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 60 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 61 | WARNING | [ ] Use of a direct database call is discouraged.
+ 61 | WARNING | [ ] Direct database call without caching detected. Consider
+    |         |     using wp_cache_get() / wp_cache_set() or wp_cache_delete().
+ 61 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 61 | ERROR   | [ ] Use placeholders and $wpdb->prepare(); found $query
+ 61 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 63 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 63 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 63 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 63 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 64 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 64 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 67 | WARNING | [x] Equals sign not aligned with surrounding assignments;
+    |         |     expected 2 spaces but found 1 space
+ 68 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 68 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 68 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 68 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 68 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 68 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 71 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 71 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 72 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 72 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 73 | ERROR   | [x] No space after opening parenthesis is prohibited
+ 73 | ERROR   | [x] No space before closing parenthesis is prohibited
+ 74 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 74 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 75 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 75 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 75 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 75 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 75 | ERROR   | [x] Short array syntax is not allowed
+ 76 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 76 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 77 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 77 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 79 | WARNING | [x] Equals sign not aligned with surrounding assignments;
+    |         |     expected 8 spaces but found 1 space
+ 79 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 79 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 80 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 80 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 81 | WARNING | [x] Equals sign not aligned with surrounding assignments;
+    |         |     expected 11 spaces but found 1 space
+ 81 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 81 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 83 | ERROR   | [x] String "<tr>" does not require double quotes; use single
+    |         |     quotes instead
+ 84 | ERROR   | [x] String "<td>" does not require double quotes; use single
+    |         |     quotes instead
+ 84 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 84 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 84 | ERROR   | [x] String "</td>" does not require double quotes; use single
+    |         |     quotes instead
+ 85 | ERROR   | [x] String "<td>" does not require double quotes; use single
+    |         |     quotes instead
+ 85 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 85 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 85 | ERROR   | [x] String "</td>" does not require double quotes; use single
+    |         |     quotes instead
+ 86 | ERROR   | [x] String "<td><a href=\"" does not require double quotes; use
+    |         |     single quotes instead
+ 86 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 86 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 86 | ERROR   | [x] String "\">" does not require double quotes; use single
+    |         |     quotes instead
+ 86 | ERROR   | [x] Expected 1 spaces after opening parenthesis; 0 found
+ 86 | ERROR   | [x] Expected 1 spaces before closing parenthesis; 0 found
+ 86 | ERROR   | [x] String "</a></td>" does not require double quotes; use
+    |         |     single quotes instead
+ 87 | ERROR   | [x] String "</tr>" does not require double quotes; use single
+    |         |     quotes instead
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 102 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+Time: 6.4 secs; Memory: 14MB
+

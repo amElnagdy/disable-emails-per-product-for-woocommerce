@@ -2,6 +2,8 @@
 
 namespace DisableEmailsPerProductForWooCommerce;
 
+use DisableEmailsPerProductForWooCommerce\Helpers;
+
 class Core
 {
 	public function __construct()
@@ -12,18 +14,16 @@ class Core
 
 	public function init(): void
 	{
-		$mailer = WC()->mailer()->get_emails();
-		foreach ($mailer as $email) {
-			if ($email->is_enabled()) {
-				add_filter('woocommerce_email_recipient_' . $email->id, [
-					$this,
-					'filter_woocommerce_email_recipient'
-				], 10, 3);
-				add_filter('woocommerce_email_recipient_' . $email->id, [
-					$this,
-					'filter_woocommerce_order_email_recipient'
-				], 9999, 2);
-			}
+		$emails = Helpers::get_enabled_emails();
+		foreach ($emails as $email) {
+			add_filter('woocommerce_email_recipient_' . $email->id, [
+				$this,
+				'filter_woocommerce_email_recipient'
+			], 10, 3);
+			add_filter('woocommerce_email_recipient_' . $email->id, [
+				$this,
+				'filter_woocommerce_order_email_recipient'
+			], 9999, 2);
 		}
 	}
 
@@ -33,16 +33,38 @@ class Core
 			return $recipient;
 		}
 
+		$items = $order->get_items();
+		if (!is_array($items) && !($items instanceof \Traversable)) {
+			return $recipient;
+		}
+
 		// Loop through order items
-		foreach ($order->get_items() as $key => $item) {
+		foreach ($items as $key => $item) {
+			if (!($item instanceof \WC_Order_Item_Product)) {
+				continue;
+			}
+
 			$product = $item->get_product();
+			if (!is_a($product, 'WC_Product')) {
+				continue;
+			}
 
-			// If it is a variation, get the parent product ID
-			$product_id = $product->is_type('variation') ? $product->get_parent_id() : $product->get_id();
+			if ($product->is_type('variation')) {
+				$product_id = $product->get_parent_id();
+				if ($product_id <= 0) {
+					continue;
+				}
+			} else {
+				$product_id = $product->get_id();
+			}
 
-			$disabled_emails = get_post_meta($product_id, '_disabled_emails', true);
+			if ($product_id <= 0) {
+				continue;
+			}
 
-			if (is_array($disabled_emails) && isset($disabled_emails[$email_instance->id])) {
+			$disabled_emails = Helpers::get_product_disabled_emails((int) $product_id);
+
+			if (isset($disabled_emails[$email_instance->id])) {
 				$recipient = '';
 				break;
 			}
@@ -59,17 +81,18 @@ class Core
 	 *
 	 * @return mixed|string
 	 */
-	public function filter_woocommerce_order_email_recipient($recipient, $order): mixed
+	public function filter_woocommerce_order_email_recipient($recipient, $order)
 	{
-
-		$page = isset($_GET['page']) ? sanitize_text_field($_GET['page']) : '';
+		$page = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
 		if ('wc-settings' === $page) {
 			return $recipient;
 		}
-		if (get_post_meta($order->get_id(), '_disable_order_emails', true)) {
+		if (!is_a($order, 'WC_Order')) {
+			return $recipient;
+		}
+		if (Helpers::is_order_emails_disabled((int) $order->get_id())) {
 			$recipient = '';
 		}
-
 		return $recipient;
 	}
 }

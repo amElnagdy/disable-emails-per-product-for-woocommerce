@@ -3,7 +3,7 @@ Contributors: nagdy
 Tags: disable emails, WooCommerce, products
 Requires PHP: 7.4
 Requires at least: 6.0
-Tested up to: 6.7
+Tested up to: 7.0
 Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -54,6 +54,15 @@ Post detailed information about the issue in the support forum and we will work 
 3. Global View: See which emails are disabled for each product.
 
 == Changelog ==
+
+= 1.1.0 =
+* New: filterable excluded email IDs (`dwepp_excluded_email_ids`).
+* New: filterable per-product configurable email list (`dwepp_product_configurable_emails`).
+* New: filterable per-product and per-order meta keys (`dwepp_disabled_emails_meta_key`, `dwepp_disable_order_emails_meta_key`).
+* New: filterable global-view product query (`dwepp_global_view_products_query`).
+* New: internal helper class `Helpers` consolidating duplicated read patterns across Admin, Core, and GlobalView.
+* Update: WordPress 7.0 readiness validated — metadata, CI matrix, and deprecated API audit complete.
+* Warning: adopting the meta-key filters creates a soft data-binding to this version or newer. Rolling back to a pre-1.1.0 version after using a non-default meta key will cause the plugin to read from the default keys again; customized-key rows remain in the database and can be recovered by reactivating the filter on 1.1.0+.
 
 = 1.0.1 =
 * WordPress 6.7 compatibility.
