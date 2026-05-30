@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Disable Emails Per Product for WooCommerce
  * Description: Disable emails per product or Order.
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: Nagdy
  * Author URI: https://nagdy.me
  * Contributors: Nagdy
